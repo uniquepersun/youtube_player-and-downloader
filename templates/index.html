@@ -8,29 +8,16 @@
 </head>
 <body>
     <h1>YouTube Downloader</h1>
-    <form id="download-form">
-        <input type="text" id="url" name="url" placeholder="Enter YouTube URL" required>
-        <button type="submit">Download</button>
-    </form>
-    <div id="result"></div>
-    <script>
-        document.getElementById('download-form').addEventListener('submit', async function (e) {
-            e.preventDefault();
-            const url = document.getElementById('url').value;
-            const response = await fetch('/download', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: new URLSearchParams({ url }),
-            });
-            const result = await response.json();
-            if (response.ok) {
-                document.getElementById('result').innerHTML = `<p>Title: ${result.title}</p><p>URL: ${result.url}</p>`;
-            } else {
-                document.getElementById('result').innerHTML = `<p>Error: ${result.error}</p>`;
-            }
-        });
-    </script>
+    <div>
+        <label for="videoUrl">Enter YouTube Video URL:</label>
+        <input type="text" id="videoUrl" placeholder="https://www.youtube.com/watch?v=example">
+        <button id="loadVideo">Load Video</button>
+    </div>
+    <div>
+        <iframe id="videoPlayer" width="560" height="500" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
 </body>
 </html>
