@@ -4,20 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Downloader</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>YouTube Downloader</h1>
-    <div>
-        <label for="videoUrl">Enter YouTube Video URL:</label>
-        <input type="text" id="videoUrl" placeholder="https://www.youtube.com/watch?v=example">
-        <button id="loadVideo">Load Video</button>
-    </div>
-    <div>
-        <iframe id="videoPlayer" width="560" height="500" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    
+    <form id="video-form">
+        <input type="text" id="video-url" placeholder="Enter YouTube URL" required>
+        <button type="submit">go</button>
+    </form>
+    <div id="video-info"></div>
+    <script src="/static/js/main.js"></script>
 </body>
 </html>
