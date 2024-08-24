@@ -36,6 +36,7 @@ async function fetchVideoInfo(videoId) {
                 data = await response.json();
                 console.log('Fetched Video Info:', data);
                 displayVideoInfo(data);
+                displayFormatOptions(data.formats);
                 return;
             } else {
                 console.error(`Failed to fetch from ${apiUrl}: ${response.statusText}`);
@@ -59,4 +60,22 @@ function displayVideoInfo(data) {
         <a href="https://www.youtube.com/watch?v=${data.videoId}">Watch on YouTube</a>
         ${videoStreamUrl ? `<video controls src="${videoStreamUrl}" style="width:100%; max-width:720px;"></video>` : "<p>Video stream not available.</p>"}
     `;
+}
+function displayFormatOptions(formats) {
+    const formatOptionsDiv = document.getElementById('format-options');
+    formatOptionsDiv.innerHTML = '<h3>Choose a format:</h3>';
+
+    formats.forEach(format => {
+        const option = document.createElement('button');
+        option.innerText = `${format.quality} - ${format.ext}`;
+        option.onclick = () => playVideo(format.url);
+        formatOptionsDiv.appendChild(option);
+    });
+}
+function playVideo(url) {
+    const playerDiv = document.getElementById('video-player');
+    playerDiv.innerHTML = `<video controls autoplay style="width: 100%; height: auto;">
+        <source src="${url}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>`;
 }
