@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#videoInfo {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #eee;
+}
+
+#videoInfo img {
+    max-width: 300px;
+    height: auto;
+}
