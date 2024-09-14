@@ -21,7 +21,7 @@ Download videos to your local device with the click of a button. :floppy_disk:
 
 - Responsive design: Works beautifully on both desktop and mobile devices. :iphone::computer:
 ## Screenshot
-[here](https://github.com/user-attachments/assets/001401b5-1cd6-41c3-b8fe-6fe71562eb21)
+[here](https://github.com/user-attachments/assets/001401b5-1cd6-41c3-b8fe-6fe71562eb21) {error due to instance down, will be changing soon}
 
 
 ## 🔗 contact me!!
