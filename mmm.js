@@ -1,6 +1,5 @@
 const apiUrls = [
-    "https://invidious.reallyaweso.me/api/v1/videos/",
-    "https://invidious.jing.rocks/api/v1/videos/",
+    "https://inv.tux.pizza//api/v1/videos/"
 ];
 
 const videoUrlInput = document.getElementById("videoUrl");
@@ -53,7 +52,7 @@ async function getVideoInfo(videoId) {
 }
 
 function displayVideoInfo(videoData) {
-    const invidiousInstance = "https://invidious.reallyaweso.me"; 
+    const invidiousInstance = "https://inv.tux.pizza"; 
     const videoInfoHTML = `
         <h2>${videoData.title}</h2>
         <img src="${videoData.videoThumbnails[0].url}" alt="${videoData.title} - Thumbnail">
