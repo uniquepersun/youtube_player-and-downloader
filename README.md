@@ -5,7 +5,7 @@ a web-based YouTube player and downloader built with HTML, CSS, and JavaScript! 
 
 
 ## usage
-Just hit the deployed web page and have fun!!
+Just hit the deployed web page (here is the [link](https://uniquepersun.github.io/youtube_player-and-downloader/)) and have fun!!
 
 
 ## But, how it works??
